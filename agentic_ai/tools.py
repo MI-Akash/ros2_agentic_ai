@@ -11,8 +11,8 @@ from openai import OpenAI
 from pathlib import Path
 
 
-# 🔐 Set OpenAI API key (DO NOT hardcode in production!)
-os.environ["OPENAI_API_KEY"] = "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"  # Replace with your actual key
+
+os.environ["OPENAI_API_KEY"] = "place the API key"  # Replace with your actual key
 
 # Initialize OpenAI client
 client = OpenAI()
