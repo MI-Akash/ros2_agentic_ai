@@ -8,7 +8,7 @@
 
 
 
-## Build and Launch the Docker Environment
+<h3>Step-1: Build and Launch the Docker Environment</h3>
 
 ```bash
 # First build turtlebot3 from the link below:
@@ -20,14 +20,19 @@ docker compose build
 
 # Launch the demo world:
 docker compose up demo-world
+
 ```
-<h3> Build a dev container</h3>
+
+
+<h3>Step-2: Build a dev container</h3>
 ```bash
 # In the cloned turtlebot3_behavior_demos directory:
 cd turtlebot3_behavior_demos
 # Launch the development container in another terminal:
 docker compose up dev
 ```
+
+
 
 <h3>Launch Local NATS Server on Linux</h3> 
 ```bash 
