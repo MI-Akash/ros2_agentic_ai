@@ -6,8 +6,7 @@
 <h2>An AI agent for ROS2</h2>
 ## Please click and watch the video
 
-[![Watch the video](https://img.youtube.com/vi/XA_JoImn5PI/0.jpg)](https://www.youtube.com/watch?v=XA_JoImn5PI)
-
+[![Watch the video](https://img.youtube.com/vi/GmDL7iSYY0I/0.jpg)](https://www.youtube.com/watch?v=GmDL7iSYY0I)
 
 
 
