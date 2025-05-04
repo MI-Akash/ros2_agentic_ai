@@ -3,7 +3,7 @@
 ## Note: please put the API key in both agent.py and tools.py
 ## For grading the purpose, my API key is provided as a token to the Professor and TA. 
 
-<h2>An AI ageny for ROS2</h2>
+<h2>An AI agent for ROS2</h2>
 ## Please click and watch the video
 
 [![Watch the video](https://img.youtube.com/vi/XA_JoImn5PI/0.jpg)](https://www.youtube.com/watch?v=XA_JoImn5PI)
