@@ -96,10 +96,10 @@ Therefore, form this repo downolad the agentic_ai folder or the two python files
 
 ## Note please put the API key in both agent.py and tools.py
 ## For grading the purpose, my API key is provided as a token to the Professor and TA. 
-## Open the agent.py file and place the OpenAI API key. Scroll down and find
+Open the agent.py file and place the OpenAI API key. Scroll down and find
 os.environ["OPENAI_API_KEY"] = "place the API key"  # 🔐 Replace with your actual key
 
-## Open the tools.py and place the OpebAI API key. Scroll down and find 
+Open the tools.py and place the OpebAI API key. Scroll down and find 
 os.environ["OPENAI_API_KEY"] = "place the API key"  # Replace with your actual key
 
 Then run agent.py 
