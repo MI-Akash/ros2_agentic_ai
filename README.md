@@ -30,6 +30,7 @@ docker compose up demo-world
 <h3>Step-2: Build a dev container</h3>
 
 ```bash
+# In another terminal
 # In the cloned turtlebot3_behavior_demos directory:
 cd turtlebot3_behavior_demos
 # Launch the development container in another terminal:
