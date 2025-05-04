@@ -8,10 +8,9 @@ task_4_understandVsalam
 ```
 
 <h2>An AI ageny for ROS2</h2>
-## Pleas click and watch the video
+## Please click and watch the video
 
-[![Watch the video]([https://img.youtube.com/vi/gKrJTZa282E/maxresdefault.jpg)](https://youtu.be/gKrJTZa282E](https://youtu.be/XA_JoImn5PI))
-
+[![Watch the video](https://img.youtube.com/vi/<VIDEO_ID>/0.jpg)](https://www.youtube.com/watch?v=XA_JoImn5PI)
 
 
 
