@@ -1,7 +1,7 @@
 <h1>Term Project</h1>
 
-### Note: please put the API key in both agent.py and tools.py
-### For grading the purpose, my API key is provided as a token to the Professor and TA. 
+##### Note: please put the API key in both agent.py and tools.py
+##### For grading the purpose, my API key is provided as a token to the Professor and TA. 
 
 <h2>An AI agent for ROS2</h2>
 ## Please click and watch the video
