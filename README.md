@@ -1,12 +1,5 @@
 <h1>Term Project</h1>
 
-## All the codes are in the following folders 
-```bash
-task_1_camera_calibration_ROS
-task_2_apply_camera_calibration_ROS
-task_4_understandVsalam
-```
-
 <h2>An AI ageny for ROS2</h2>
 ## Please click and watch the video
 
@@ -14,98 +7,112 @@ task_4_understandVsalam
 
 
 
-<h2>Task 1: Camera Calibration (ROS)</h2>
-
-<figure>
-    <figcaption><strong>Capturing checkerboard using in ros2 and publishing as a topic</figcaption>
-    <img src="images/camcal.png" alt="Photo 1" width="720">
-    
-</figure>
-
-<b> Step1: Download to task_1_camera_calibration_ROS.</b>
-<b> Step2: source ros2 then run ros2_cam_strm_saver.py.</b>
-<b> This python script will save camera frames from the stream to \``images\'' folder.</b>
-<b> Step3: run camera_calibrate.py; it will calibrate the camera configuration from the \``images\'' in the images folder and save \``camera_config.yaml\'' file.</b>
-
-
-<h2>Task 2: Apply Camera Calibration (ROS)</h2>
-
-<figure>
-    <figcaption><strong>Estimating camera position in the turtle bot meze environment</figcaption>
-    <img src="images/campos.png" alt="Photo 1" width="720">
-    
-</figure>
 
 ## Build and Launch the Docker Environment
 
 ```bash
+# First build turtlebot3 from the link below:
+https://github.com/pantelis/turtlebot-maze
+
 # In the cloned turtlebot3_behavior_demos directory:
+cd turtlebot3_behavior_demos
 docker compose build
 
 # Launch the demo world:
 docker compose up demo-world
-
-# Launch the development container:
+```
+<h3> Build a dev container</h3>
+```bash
+# In the cloned turtlebot3_behavior_demos directory:
+cd turtlebot3_behavior_demos
+# Launch the development container in another terminal:
 docker compose up dev
+```
 
-# Access the development container:
+<h3>Launch Local NATS Server on Linux</h3> 
+```bash 
+# In another terminal 
+# In the cloned turtlebot3_behavior_demos directory:
+cd turtlebot3_behavior_demos
+# Access the development container from another terminal:
+docker compose exec -it dev bash
+
+# If NATS is not downloaded yet, 
+# Download the server files 
+wget https://github.com/nats-io/nats-server/releases/download/v2.10.11/nats-server-v2.10.11-linux-amd64.zip
+
+# Step 2: Unzip it
+unzip nats-server-v2.10.11-linux-amd64.zip
+
+# Step 3: Enter the directory
+cd nats-server-v2.10.11-linux-amd64
+# Step 4: Run the server
+./nats-server
+```
+<h3>Run ros2_Robot for AI agent</h3> 
+```bash 
+# In another terminal 
+# In the cloned turtlebot3_behavior_demos directory:
+cd turtlebot3_behavior_demos
+# Access the development container from another terminal:
 docker compose exec -it dev bash
 
 # Navigate to the source folder:
 cd src
 
-# Create a new ROS2 Python package:
-ros2 pkg create --build-type ament_python ecp_pkg
+# Clone this repo 
+git clone https://github.com/MI-Akash/ros2_agentic_ai.git
 
-# Create and edit the main Python script:
-nano ecp_pkg/ecp_pkg/ecp.py
-# Paste the code from the task_2_apply_camera_calibration_ROS folder into ecp.py.
+#Getting back to the previous folder
+cd ..
+
 # Make the script executable:
-chmod +x ecp_pkg/ecp_pkg/ecp.py
-# Edit the setup.py file:
-nano ecp_pkg/setup.py
-# Paste the setup.py content from the task_2_apply_camera_calibration_ROS folder into this file.
+chmod +x src/ros2_ai_agent/ros2_robot_pkg/ros2_robot.py
+
+
 # Build the specific package:
-colcon build --packages-select ecp_pkg
+colcon build --packages-select ros2_robot_pkg
 
 # Source the install setup (only if not already sourced):
 source install/setup.bash
 
 # Run the node:
-ros2 run ecp_pkg ecp
+ros2 run ros2_robot_pkg ros2_robot
 ```
+<h3>Run the AI agent</h3> 
+It is not necessary to run agentic_ai from the same device, e.g., PC, but there is no need to run from the dev container. 
+Therefore, form this repo downolad the agentic_ai folder or the two python files from there (agent.py and tools.py)
+
+# Note please put the API key in both agent.py and tools.py
+# For grading the purpose, my API key is provided as a token to the Professor and TA. 
+# open the agent.py file and place the OpenAI API key. Scroll down and find
+os.environ["OPENAI_API_KEY"] = "place the API key"  # 🔐 Replace with your actual key
+
+# open the tools.py and place the OpebAI API key. Scroll down and find 
+os.environ["OPENAI_API_KEY"] = "place the API key"  # Replace with your actual key
+
+Then run agent.py 
 
 
-<h2>Task 3: Showcase StellaVSLAM</h2>
-## Pleas click and watch the video
 
-[![Watch the video](https://img.youtube.com/vi/gKrJTZa282E/maxresdefault.jpg)](https://youtu.be/gKrJTZa282E)
+#Or
+``` bash
+# from another terminal 
+# Clone this repo 
+git clone https://github.com/MI-Akash/ros2_agentic_ai.git
 
+# Go to
 
-<h2>Task 4: Understand VSLAM</h2>
-<figure>
-    <figcaption><strong>VSLAM with python code runs on KITTI dataset</figcaption>
-    <img src="images/Vslampython.png" alt="Photo 1" width="720">
-    
-</figure>
+cd agentic_ai
 
-## Python is prepared for VSLAM and tested on KITTI dataset 
-```bash
-# please download the dataset from KITTI 
-# in task_4_understandVSalam folder, open the vslam3.py 
-# edit the following with your desired path 
-def main():
+# open the agent.py file and place the OpenAI API key. Scroll down and find
+os.environ["OPENAI_API_KEY"] = "place the API key"  # 🔐 Replace with your actual key
 
-    # path to the calibration file of the camera
-    calib_file = r"E:\Storage\Academic_study\CS_AI_for_Robotics\Assignment3\data_odometry_gray\dataset\sequences\00\calib.txt"
-    # path to the images from the datatset
-    image_folder = r"E:\Storage\Academic_study\CS_AI_for_Robotics\Assignment3\data_odometry_gray\dataset\sequences\00\image_0"
-    # path to saving output trajectory
-    output_traj_file = r"E:\Storage\Academic_study\CS_AI_for_Robotics\Assignment3\trajectory.txt"
+# open the tools.py and place the OpebAI API key. Scroll down and find 
+os.environ["OPENAI_API_KEY"] = "place the API key"  # Replace with your actual key
+
+# run
+
+python agent.py
 
 ```
-<figure>
-    <figcaption><strong>Trajectory of VSLAM with python code runs on KITTI dataset</figcaption>
-    <img src="images/trajectory.png" alt="Photo 1" width="720">
-    
-</figure>
