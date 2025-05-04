@@ -25,6 +25,7 @@ docker compose up demo-world
 
 
 <h3>Step-2: Build a dev container</h3>
+
 ```bash
 # In the cloned turtlebot3_behavior_demos directory:
 cd turtlebot3_behavior_demos
@@ -34,7 +35,8 @@ docker compose up dev
 
 
 
-<h3>Launch Local NATS Server on Linux</h3> 
+<h3>Step-3: Launch Local NATS Server on Linux</h3>
+
 ```bash 
 # In another terminal 
 # In the cloned turtlebot3_behavior_demos directory:
@@ -54,7 +56,8 @@ cd nats-server-v2.10.11-linux-amd64
 # Step 4: Run the server
 ./nats-server
 ```
-<h3>Run ros2_Robot for AI agent</h3> 
+<h3>Step-4: Run ros2_Robot for AI agent</h3>
+
 ```bash 
 # In another terminal 
 # In the cloned turtlebot3_behavior_demos directory:
@@ -84,7 +87,10 @@ source install/setup.bash
 # Run the node:
 ros2 run ros2_robot_pkg ros2_robot
 ```
-<h3>Run the AI agent</h3> 
+
+
+<h3>Step-5: Run the AI agent</h3>
+
 It is not necessary to run agentic_ai from the same device, e.g., PC, but there is no need to run from the dev container. 
 Therefore, form this repo downolad the agentic_ai folder or the two python files from there (agent.py and tools.py)
 
@@ -101,6 +107,8 @@ Then run agent.py
 
 
 #Or
+
+
 ``` bash
 # from another terminal 
 # Clone this repo 
