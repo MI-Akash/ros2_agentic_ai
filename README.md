@@ -94,19 +94,19 @@ ros2 run ros2_robot_pkg ros2_robot
 It is not necessary to run agentic_ai from the same device, e.g., PC, but there is no need to run from the dev container. 
 Therefore, form this repo downolad the agentic_ai folder or the two python files from there (agent.py and tools.py)
 
-# Note please put the API key in both agent.py and tools.py
-# For grading the purpose, my API key is provided as a token to the Professor and TA. 
-# open the agent.py file and place the OpenAI API key. Scroll down and find
+## Note please put the API key in both agent.py and tools.py
+## For grading the purpose, my API key is provided as a token to the Professor and TA. 
+## Open the agent.py file and place the OpenAI API key. Scroll down and find
 os.environ["OPENAI_API_KEY"] = "place the API key"  # 🔐 Replace with your actual key
 
-# open the tools.py and place the OpebAI API key. Scroll down and find 
+## Open the tools.py and place the OpebAI API key. Scroll down and find 
 os.environ["OPENAI_API_KEY"] = "place the API key"  # Replace with your actual key
 
 Then run agent.py 
 
 
 
-#Or
+# Or
 
 
 ``` bash
