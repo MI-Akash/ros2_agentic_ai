@@ -9,7 +9,6 @@
 [![Watch the video](https://img.youtube.com/vi/GmDL7iSYY0I/0.jpg)](https://www.youtube.com/watch?v=GmDL7iSYY0I)
 
 
-
 <h3>Step-1: Build and Launch the Docker Environment</h3>
 
 ```bash
