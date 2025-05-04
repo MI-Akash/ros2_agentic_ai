@@ -6,9 +6,9 @@
 <h2>An AI agent for ROS2</h2>
 ## Please click and watch the video
 
-[![Watch the video](https://img.youtube.com/vi/GmDL7iSYY0I/5.jpg)](https://www.youtube.com/watch?v=GmDL7iSYY0I)
+[![Watch the video](https://img.youtube.com/vi/GmDL7iSYY0I/0.jpg)](https://www.youtube.com/watch?v=GmDL7iSYY0I)
 
-
+https://youtu.be/GmDL7iSYY0I
 <h3>Step-1: Build and Launch the Docker Environment</h3>
 
 ```bash
